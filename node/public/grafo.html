@@ -1,1 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Visualização Neo4j</title>
+  <style>html,body,#viz{height:100%;margin:0;padding:0}</style>
+</head>
+<body>
+  <div id="viz"></div>
 
+  <script src="https://cdn.neo4jlabs.com/neovis.js/v1.6.0/neovis.js"></script>
+  <script>
+    const config = {
+      container_id: "viz",
+      server_url: "bolt://localhost:7687",
+      server_user: "neo4j",
+      server_password: "senha123",
+      labels: {
+        Medico: { caption: "nome" },
+        Paciente: { caption: "nome" },
+        Hospital: { caption: "nome" },
+        Especialidade: { caption: "nome" },
+        Plano: { caption: "nome" }
+      },
+      relationships: {
+        TEM_ESPECIALIDADE: { caption: false },
+        ATENDE_EM: { caption: false },
+        ACEITA: { caption: false },
+        TEVE_CONSULTA: { caption: false },
+        FEITA_POR: { caption: false }
+      },
+      initial_cypher: "MATCH (n)-[r]->(m) RETURN n, r, m LIMIT 300"
+    };
+    const viz = new NeoVis.default(config);
+    viz.render();
+  </script>
+</body>
+</html>
