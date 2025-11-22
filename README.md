@@ -3,7 +3,7 @@
 Repositório com:
 - Script Cypher para modelar e popular um sistema de atendimento médico.
 - Consultas solicitadas no exercício.
-- (Opcional) API Node.js simples e página para visualizar o grafo.
+- API Node.js simples e página para visualizar o grafo.
 
 ## Como usar (local com Docker)
 
