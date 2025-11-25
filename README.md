@@ -1,4 +1,4 @@
-# Neo4j-Atendimento-M-dico
+# Neo4j-Atendimento-Medico
 
 Repositório com:
 - Script Cypher para modelar e popular um sistema de atendimento médico.
